@@ -18,7 +18,7 @@ class GenreSerializer(serializers.ModelSerializer):
 
 
 class ActorSerializer(serializers.ModelSerializer):
-    def get_full_name(self, obj):
+    def get_full_name(self, obj: Actor) -> str:
         return obj.first_name + " " + obj.last_name
 
     class Meta:
